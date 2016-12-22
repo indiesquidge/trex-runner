@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "T-Rex Runner",
+  "description": "Keep track of your highest score in Chrome's T-Rex game",
+  "version": "1.0",
+
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "T-Rex Runner"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ]
+}
