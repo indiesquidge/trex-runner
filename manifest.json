@@ -3,19 +3,25 @@
 
   "name": "T-Rex Runner",
   "description": "Keep track of your highest score in Chrome's T-Rex game",
-  "version": "1.0",
-
+  "version": "0.0.2",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["src/inject.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    "src/high-score.js"
+  ],
   "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
   },
   "browser_action": {
     "default_popup": "index.html",
     "default_title": "T-Rex Runner"
   },
-  "permissions": [
-    "activeTab",
-    "tabs"
-  ]
+  "offline_enabled": true
 }
